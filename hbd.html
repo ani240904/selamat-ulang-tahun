@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulang Tahun Istimewa untuk Kamu ❤️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff5f7;
+            overflow-x: hidden;
+            transition: background-color 1s ease;
+        }
+        
+        .heart {
+            position: absolute;
+            pointer-events: none;
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+        
+        .button-glow {
+            animation: glow 2s infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { box-shadow: 0 0 5px #f43f5e; }
+            to { box-shadow: 0 0 20px #f43f5e, 0 0 30px #f43f5e; }
+        }
+        
+        .cake {
+            transition: all 0.3s ease;
+        }
+        
+        .cake:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .polaroid {
+            background: white;
+            padding: 15px 15px 60px 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transform: rotate(-5deg);
+            transition: all 0.3s ease;
+        }
+        
+        .polaroid:hover {
+            transform: rotate(0deg) scale(1.05);
+        }
+        
+        .polaroid:nth-child(even) {
+            transform: rotate(5deg);
+        }
+        
+        .polaroid:nth-child(even):hover {
+            transform: rotate(0deg) scale(1.05);
+        }
+        
+        .bouquet {
+            animation: swing 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes swing {
+            0% { transform: rotate(-5deg); }
+            100% { transform: rotate(5deg); }
+        }
+        
+        .love-letter {
+            background: url('https://placehold.co/800x1000/f0f0f0/333333?text=Surat+Cinta') center/cover;
+            transition: all 0.5s ease;
+        }
+        
+        .love-letter:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(244, 63, 94, 0.3);
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: 2px solid #f43f5e;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: 2px;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #f43f5e; }
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #f43f5e;
+            opacity: 0;
+        }
+        
+        .photo-stack {
+            perspective: 1000px;
+        }
+        
+        .photo-stack img {
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .photo-stack:hover img {
+            transform: rotateY(20deg);
+        }
+        
+        .photo-stack:hover img:nth-child(even) {
+            transform: rotateY(-20deg);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4">
+    <div id="hearts-container"></div>
+    
+    <div class="max-w-3xl w-full bg-white rounded-3xl shadow-xl overflow-hidden mb-8">
+        <div class="relative bg-gradient-to-r from-pink-500 to-rose-500 py-10 px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 typewriter">Selamat Ulang Tahun Sayangku!</h1>
+            <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+                <div class="confetti" style="top: 10%; left: 5%;"></div>
+                <div class="confetti" style="top: 20%; left: 15%;"></div>
+                <div class="confetti" style="top: 30%; left: 25%;"></div>
+                <div class="confetti" style="top: 40%; left: 35%;"></div>
+                <div class="confetti" style="top: 50%; left: 45%;"></div>
+                <div class="confetti" style="top: 60%; left: 55%;"></div>
+                <div class="confetti" style="top: 70%; left: 65%;"></div>
+                <div class="confetti" style="top: 80%; left: 75%;"></div>
+                <div class="confetti" style="top: 90%; left: 85%;"></div>
+            </div>
+        </div>
+        
+        <div class="p-6 md:p-10">
+            <div class="flex justify-center mb-8">
+                <img src="https://placehold.co/350x350/f9a8d4/ffffff?text=Happy+Birthday" alt="Kue ulang tahun dengan lilin berbentuk hati dan hiasan bunga-bunga" class="w-48 h-48 object-cover rounded-full border-4 border-pink-200 shadow-lg cake">
+            </div>
+            
+            <div class="text-center mb-10">
+                <p class="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
+                    Hari ini adalah hari yang spesial, hari dimana <span class="font-bold text-rose-600">bintang paling indah</span> di hidupku bertambah 1 usia. 
+                </p>
+                <p class="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
+                    Setiap tahun bersama kamu selalu terasa seperti petualangan baru. Kamu membuat hari-hariku lebih berwarna dengan tawamu yang manis dan hatimu yang penuh kasih.
+                </p>
+                
+                <button id="surprise-btn" class="bg-rose-500 hover:bg-rose-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 button-glow mb-6">
+                    Klik untuk Kejutan!
+                </button>
+            </div>
+            
+            <div id="photo-memories" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                <div class="polaroid">
+                    <img src="https://placehold.co/600x400/f5e0f9/333333?text=Kita+di+Pantai" alt="Kita berdua di pantai saat matahari terbenam, mengenakan pakaian putih" class="w-full h-48 object-cover">
+                    <p class="text-center mt-2 text-gray-600">Petualangan Pertama</p>
+                </div>
+                <div class="polaroid">
+                    <img src="https://placehold.co/600x400/f0f9f4/333333?text=Makan+Malam" alt="Kita makan malam romantis dengan lilin di restoran kecil" class="w-full h-48 object-cover">
+                    <p class="text-center mt-2 text-gray-600">Malam Romantis</p>
+                </div>
+                <div class="polaroid">
+                    <img src="https://placehold.co/600x400/e9f5ff/333333?text=Tertawa+Bersama" alt="Kita tertawa bersama saat membuat kue yang berantakan" class="w-full h-48 object-cover">
+                    <p class="text-center mt-2 text-gray-600">Momen Bahagia</p>
+                </div>
+                <div class="polaroid">
+                    <img src="https://placehold.co/600x400/fff5f5/333333?text=Pelukan" alt="Kita berpelukan hangat di tengah salju" class="w-full h-48 object-cover">
+                    <p class="text-center mt-2 text-gray-600">Kehangatanmu</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-10">
+                <div class="w-48 h-48 relative">
+                    <img src="https://placehold.co/500x500/f8e3ff/333333?text=Bouquet+Bunga" alt="Buket bunga mawar merah dan putih dengan hiasan pita satin" class="w-full h-full object-cover rounded-lg bouquet">
+                </div>
+                <div class="max-w-md">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Untuk Kamu yang Tersayang ❤️</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        Selamat ulang tahun untuk orang paling spesial dalam hidupku. Semoga tahun ini membawa lebih banyak kebahagiaan, kesuksesan, dan petualangan seru untuk kita berdua. Kamu adalah alasan di balik setiap senyumku.
+                    </p>
+                </div>
+            </div>
+            
+            <div id="slideshow" class="relative h-64 bg-gray-100 rounded-lg overflow-hidden mb-10">
+                <div id="slides" class="absolute inset-0">
+                    <img src="https://placehold.co/800x500/f5e0f9/333333?text=Hari+Yg+Indah" alt="Kita berjalan-jalan di taman bunga yang penuh warna" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                    <img src="https://placehold.co/800x500/e9f5ff/333333?text=Momen+Berharga" alt="Kita bertukar hadiah dengan mata berbinar" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                    <img src="https://placehold.co/800x500/f0f9f4/333333?text=Selfie+Lucu" alt="Selfie kita dengan wajah lucu memakai filter" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                </div>
+            </div>
+            
+            <div id="letter-section" class="hidden">
+                <div class="max-w-xl mx-auto p-8 border border-pink-200 rounded-xl bg-white shadow-md love-letter">
+                    <div class="bg-white bg-opacity-90 p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold text-rose-600 mb-4">Surat Cinta untukmu...</h3>
+                        <p class="text-gray-700 mb-4">
+                            Sayangku yang tercinta,
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            Di hari spesialmu ini, aku ingin mengungkapkan betapa beruntungnya aku memilikimu. Setiap hari bersamamu adalah anugerah yang tak ternilai.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            Kamu adalah seseorang yang selalu membuatku merasa istimewa, bahkan saat aku tidak merasa pantas untuk itu. Kamu adalah tempatku pulang, pelabuhan hatiku yang tenang di tengah badai.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            Di hari ulang tahunmu ini, aku berjanji akan selalu berada di sampingmu, mendukungmu, mencintaimu sepenuh hati, dan menjadi orang yang membuatmu tersenyum setiap hari.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            Selamat ulang tahun sayangku. Semoga tahun ini membawa lebih banyak kebahagiaan dan impian yang terwujud untuk kita berdua.
+                        </p>
+                        <p class="text-rose-600 font-bold">
+                            Dengan cinta sepenuh hatiku,<br>
+                            Pacarmu yang selalu menyayangimu ❤️
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="countdown" class="text-center py-6 border-t border-pink-100">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">Hitung mundur sampai ulang tahunmu berikutnya!</h3>
+                <div class="flex justify-center gap-2">
+                    <div class="bg-pink-100 text-pink-800 rounded-lg p-3 w-16">
+                        <div class="text-2xl font-bold" id="days">365</div>
+                        <div class="text-xs">Hari</div>
+                    </div>
+                    <div class="bg-pink-100 text-pink-800 rounded-lg p-3 w-16">
+                        <div class="text-2xl font-bold" id="hours">24</div>
+                        <div class="text-xs">Jam</div>
+                    </div>
+                    <div class="bg-pink-100 text-pink-800 rounded-lg p-3 w-16">
+                        <div class="text-2xl font-bold" id="minutes">60</div>
+                        <div class="text-xs">Menit</div>
+                    </div>
+                    <div class="bg-pink-100 text-pink-800 rounded-lg p-3 w-16">
+                        <div class="text-2xl font-bold" id="seconds">60</div>
+                        <div class="text-xs">Detik</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="text-center text-gray-500 text-sm mb-4">
+        Dibuat dengan ❤️ khusus untukmu pada <span id="current-date"></span>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current date
+            const now = new Date();
+            document.getElementById('current-date').textContent = now.toLocaleDateString('id-ID', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+            // Create floating hearts
+            function createHearts() {
+                const container = document.getElementById('hearts-container');
+                const colors = ['#f43f5e', '#f472b6', '#fb7185', '#fda4af'];
+                
+                for (let i = 0; i < 20; i++) {
+                    const heart = document.createElement('div');
+                    heart.innerHTML = '❤️';
+                    heart.classList.add('heart');
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    heart.style.top = Math.random() * 100 + 'vh';
+                    heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+                    heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+                    heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                    heart.style.animationDelay = Math.random() * 2 + 's';
+                    container.appendChild(heart);
+                }
+            }
+            
+            createHearts();
+            
+            // Photo slideshow
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('#slides img');
+            
+            function showSlide(n) {
+                slides.forEach(slide => slide.style.opacity = 0);
+                slides[n].style.opacity = 1;
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+            
+            showSlide(0);
+            setInterval(nextSlide, 3000);
+            
+            // Surprise button
+            const surpriseBtn = document.getElementById('surprise-btn');
+            const letterSection = document.getElementById('letter-section');
+            
+            surpriseBtn.addEventListener('click', function() {
+                letterSection.classList.toggle('hidden');
+                
+                if (!letterSection.classList.contains('hidden')) {
+                    // Create confetti effect
+                    const confettiElements = document.querySelectorAll('.confetti');
+                    confettiElements.forEach(el => {
+                        el.style.opacity = 1;
+                        el.style.left = Math.random() * 100 + '%';
+                        el.style.top = Math.random() * 100 + '%';
+                        el.style.backgroundColor = `hsl(${Math.random() * 60 + 330}, 100%, 70%)`;
+                        el.style.width = Math.random() * 10 + 5 + 'px';
+                        el.style.height = Math.random() * 10 + 5 + 'px';
+                        
+                        setTimeout(() => {
+                            el.style.opacity = 0;
+                        }, 1000);
+                    });
+                    
+                    // Change background color
+                    document.body.style.backgroundColor = '#fff0f3';
+                    
+                    // Create more hearts
+                    setTimeout(createHearts, 500);
+                } else {
+                    document.body.style.backgroundColor = '#fff5f7';
+                }
+            });
+            
+            // Countdown timer
+            function updateCountdown() {
+                // For demo purposes, we'll just count down seconds
+                let seconds = parseInt(document.getElementById('seconds').textContent);
+                let minutes = parseInt(document.getElementById('minutes').textContent);
+                let hours = parseInt(document.getElementById('hours').textContent);
+                let days = parseInt(document.getElementById('days').textContent);
+                
+                if (seconds > 0) {
+                    seconds--;
+                } else {
+                    seconds = 59;
+                    if (minutes > 0) {
+                        minutes--;
+                    } else {
+                        minutes = 59;
+                        if (hours > 0) {
+                            hours--;
+                        } else {
+                            hours = 23;
+                            days--;
+                        }
+                    }
+                }
+                
+                document.getElementById('seconds').textContent = seconds < 10 ? '0' + seconds : seconds;
+                document.getElementById('minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
+                document.getElementById('hours').textContent = hours < 10 ? '0' + hours : hours;
+                document.getElementById('days').textContent = days;
+            }
+            
+            setInterval(updateCountdown, 1000);
+            
+            // Add hover effect to photo stack
+            const photoStack = document.querySelector('.photo-stack');
+            const photos = document.querySelectorAll('.photo-stack img');
+            
+            photoStack.addEventListener('mousemove', (e) => {
+                const x = e.clientX - photoStack.getBoundingClientRect().left;
+                const width = photoStack.offsetWidth;
+                const move = (x / width - 0.5) * 20;
+                
+                photos.forEach((photo, i) => {
+                    const offset = i % 2 === 0 ? move : -move;
+                    photo.style.transform = `rotateY(${offset}deg)`;
+                });
+            });
+            
+            photoStack.addEventListener('mouseleave', () => {
+                photos.forEach(photo => {
+                    photo.style.transform = 'rotateY(0)';
+                });
+            });
+            
+            // Add click effect to cake
+            const cake = document.querySelector('.cake');
+            cake.addEventListener('click', function() {
+                this.style.transform = 'scale(1.2) rotate(15deg)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1.1) rotate(5deg)';
+                }, 300);
+                
+                // Create sparkle effect
+                for (let i = 0; i < 10; i++) {
+                    const sparkle = document.createElement('div');
+                    sparkle.classList.add('heart');
+                    sparkle.innerHTML = '✨';
+                    sparkle.style.left = cake.offsetLeft + cake.offsetWidth/2 + 'px';
+                    sparkle.style.top = cake.offsetTop + 'px';
+                    sparkle.style.fontSize = '15px';
+                    sparkle.style.color = '#ffde59';
+                    sparkle.style.animationDuration = '1.5s';
+                    document.body.appendChild(sparkle);
+                    
+                    setTimeout(() => {
+                        sparkle.remove();
+                    }, 1500);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
